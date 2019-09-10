@@ -37,10 +37,13 @@ USAGE
 
   mc = MorrisCounter(size=1000000, dtype='uint8', redix=2, seed=0)
   mc.count('ZOC')
-  # => 0
+  # => 1
   mc.increment('ZOC')
   mc.count('ZOC')
-  # => 1
+  # => 2
+  _ = [mc.increment('ZOC') for _ in range(2000)]
+  mc.count('ZOC')
+  # => 2048
 
 
 .. |travis| image:: https://travis-ci.org/ikegami-yukino/morris_counter.svg?branch=master

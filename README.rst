@@ -35,7 +35,7 @@ USAGE
 
   from morris_counter import MorrisCounter
 
-  mc = MorrisCounter()
+  mc = MorrisCounter(size=1000000, dtype='uint8', redix=2, seed=0)
   mc.count('ZOC')
   # => 0
   mc.increment('ZOC')
